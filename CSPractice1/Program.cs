@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace CSPractice1
 {
+    class FirstClass
+    {
+
+    }
     internal class Program
     {
+        class ThirdClass
+        {
+
+        }
+
         static void Main(string[] args)
         {
             // #1 12-1. 기본용어
