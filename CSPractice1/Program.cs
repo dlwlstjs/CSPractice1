@@ -6,6 +6,28 @@ using System.Threading.Tasks;
 
 namespace CSPractice1
 {
+    class Box
+    {
+        public int Width { get; set; }
+        private int height;
+
+        public int Height
+        {
+            get { return height; }
+            set
+            {
+                if (value > 0)
+                {
+                    height = value;
+                }
+                else
+                {
+                    throw new Exception();
+                }
+            }
+        }
+
+    }
     class Sample
     {
         public static int value;
@@ -18,7 +40,8 @@ namespace CSPractice1
         {
             Console.WriteLine("(인스턴스) 생성자 호출");
         }
-        ~Sample(){
+        ~Sample()
+        {
             Console.WriteLine("소멸자 호출");
         }
     }
@@ -93,8 +116,8 @@ namespace CSPractice1
 
             // 문자열 인덱스 접근 [ ]
             Console.WriteLine("Hello World"[4]); // "o" 출력
-            //Console.WriteLine("Hello World"[100]); // 예외 발생
-            //Console.WriteLine("Hello World"[-3]);  // 예외 발생
+                                                 //Console.WriteLine("Hello World"[100]); // 예외 발생
+                                                 //Console.WriteLine("Hello World"[-3]);  // 예외 발생
 
             // 주의 
             Console.WriteLine('가' + '힣');
@@ -248,6 +271,13 @@ namespace CSPractice1
             Console.WriteLine("셋 번째 위치");
 
             // #5 22-7. 소멸자
+
+            // #5 22-8. 속성(Property)
+            Box b = new Box();
+            b.Width = 180;
+            b.Height = 100;
+            b.Height = -100;
+
         }
     }
 }
